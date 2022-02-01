@@ -1,0 +1,9 @@
+spring:
+  data:
+    cassandra:
+      username: siEDMykrjJFsZjZeNfHOXJmj
+      password: QXEik05mmWlJcuon5yLP,4Wl7cZJCINULLqNEACGeUtDdziAEn2679ZWDvapBZNYplIfcm7p1BjvF.EZ,K,GtwizgGfvm9KsHDE60M7kmdDcEZlK-z67oGNOEwGr90Zo
+
+astra.db:
+  id: 61c54b3f-2ca5-4545-99d3-fe5aecdd6f9b
+  application.token: AstraCS:siEDMykrjJFsZjZeNfHOXJmj:db8cf72b37d90304ee6e4fac9ec1197dcacbb1a2ea2137aff5eaed89ce258d1a
