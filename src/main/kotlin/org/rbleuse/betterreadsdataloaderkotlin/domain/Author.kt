@@ -1,4 +1,4 @@
-package org.rbleuse.betterreadsdataloader.domain
+package org.rbleuse.betterreadsdataloaderkotlin.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType

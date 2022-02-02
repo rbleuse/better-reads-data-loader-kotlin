@@ -1,4 +1,4 @@
-package org.rbleuse.betterreadsdataloader.dto
+package org.rbleuse.betterreadsdataloaderkotlin.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty

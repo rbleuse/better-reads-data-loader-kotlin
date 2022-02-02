@@ -1,10 +1,10 @@
-package org.rbleuse.betterreadsdataloader
+package org.rbleuse.betterreadsdataloaderkotlin
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class BetterReadsDataLoaderApplicationTests {
+class BetterReadsDataLoaderKotlinApplicationTests {
 
     @Test
     fun contextLoads() {

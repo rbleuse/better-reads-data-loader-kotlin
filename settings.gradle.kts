@@ -4,4 +4,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = "better-reads-data-loader"
+rootProject.name = "better-reads-data-loader-kotlin"

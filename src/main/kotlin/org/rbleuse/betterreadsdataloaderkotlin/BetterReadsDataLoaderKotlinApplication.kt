@@ -1,37 +1,32 @@
-package org.rbleuse.betterreadsdataloader
+package org.rbleuse.betterreadsdataloaderkotlin
 
-import com.datastax.oss.driver.api.core.CqlSessionBuilder
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import org.rbleuse.betterreadsdataloader.connection.DataStaxAstraProperties
-import org.rbleuse.betterreadsdataloader.domain.Author
-import org.rbleuse.betterreadsdataloader.domain.Book
-import org.rbleuse.betterreadsdataloader.dto.AuthorDumpDto
-import org.rbleuse.betterreadsdataloader.dto.BookDumpDto
-import org.rbleuse.betterreadsdataloader.repository.AuthorRepository
-import org.rbleuse.betterreadsdataloader.repository.BookRepository
+import org.rbleuse.betterreadsdataloaderkotlin.domain.Author
+import org.rbleuse.betterreadsdataloaderkotlin.domain.Book
+import org.rbleuse.betterreadsdataloaderkotlin.dto.AuthorDumpDto
+import org.rbleuse.betterreadsdataloaderkotlin.dto.BookDumpDto
+import org.rbleuse.betterreadsdataloaderkotlin.repository.AuthorRepository
+import org.rbleuse.betterreadsdataloaderkotlin.repository.BookRepository
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer
 import org.springframework.boot.context.event.ApplicationReadyEvent
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.runApplication
-import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Lazy
 import org.springframework.context.event.EventListener
 import org.springframework.data.repository.findByIdOrNull
 import java.nio.file.Files
-import java.nio.file.Path
 import java.nio.file.Paths
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-class BetterReadsDataLoaderApplication
-constructor(val authorRepository: AuthorRepository,
-            val bookRepository: BookRepository,
-            @Value("\${datadump.location.authors}") val authorDumpLocation: String,
-            @Value("\${datadump.location.works}") val worksDumpLocation: String,
-            val objectMapper: ObjectMapper) {
+class BetterReadsDataLoaderKotlinApplication
+constructor(
+    val authorRepository: AuthorRepository,
+    val bookRepository: BookRepository,
+    @Value("\${datadump.location.authors}") val authorDumpLocation: String,
+    @Value("\${datadump.location.works}") val worksDumpLocation: String,
+    val objectMapper: ObjectMapper
+) {
 
     private fun initAuthors() {
         val path = Paths.get(authorDumpLocation)
@@ -96,5 +91,5 @@ constructor(val authorRepository: AuthorRepository,
 }
 
 fun main(args: Array<String>) {
-    runApplication<BetterReadsDataLoaderApplication>(*args)
+    runApplication<BetterReadsDataLoaderKotlinApplication>(*args)
 }

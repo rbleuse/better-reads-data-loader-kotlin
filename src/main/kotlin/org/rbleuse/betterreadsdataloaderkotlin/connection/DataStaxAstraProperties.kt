@@ -1,4 +1,4 @@
-package org.rbleuse.betterreadsdataloader.connection
+package org.rbleuse.betterreadsdataloaderkotlin.connection
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding

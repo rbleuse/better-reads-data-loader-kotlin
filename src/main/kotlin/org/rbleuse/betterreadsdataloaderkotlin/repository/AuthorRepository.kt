@@ -1,6 +1,6 @@
-package org.rbleuse.betterreadsdataloader.repository
+package org.rbleuse.betterreadsdataloaderkotlin.repository
 
-import org.rbleuse.betterreadsdataloader.domain.Author
+import org.rbleuse.betterreadsdataloaderkotlin.domain.Author
 import org.springframework.data.cassandra.repository.CassandraRepository
 import org.springframework.stereotype.Repository
 

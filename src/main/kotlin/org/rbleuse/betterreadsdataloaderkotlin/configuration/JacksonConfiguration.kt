@@ -1,11 +1,10 @@
-package org.rbleuse.betterreadsdataloader.configuration
+package org.rbleuse.betterreadsdataloaderkotlin.configuration
 
 import com.datastax.oss.driver.api.core.CqlSessionBuilder
-import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import org.rbleuse.betterreadsdataloader.connection.DataStaxAstraProperties
+import org.rbleuse.betterreadsdataloaderkotlin.connection.DataStaxAstraProperties
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
