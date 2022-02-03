@@ -36,5 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 
+src/main/resources/application-local.yml
+
 ### Secure Bundle ###
-/src/main/resources/secure-connect.zip
+src/main/resources/secure-connect.zip
