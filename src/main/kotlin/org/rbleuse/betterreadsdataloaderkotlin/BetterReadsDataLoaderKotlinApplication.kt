@@ -71,8 +71,8 @@ constructor(
                             book.description?.value ?: "",
                             book.created.value,
                             book.covers,
-                            authorIds,
-                            authorNames
+                            authorNames,
+                            authorIds
                         )
                     )
                 } catch (e: Exception) {
