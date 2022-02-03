@@ -1,7 +1,7 @@
 package org.rbleuse.betterreadsdataloaderkotlin
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.rbleuse.betterreadsdataloaderkotlin.connection.DatadumpLocationProperties
+import org.rbleuse.betterreadsdataloaderkotlin.configuration.DatadumpLocationProperties
 import org.rbleuse.betterreadsdataloaderkotlin.domain.Author
 import org.rbleuse.betterreadsdataloaderkotlin.domain.Book
 import org.rbleuse.betterreadsdataloaderkotlin.dto.AuthorDumpDto
