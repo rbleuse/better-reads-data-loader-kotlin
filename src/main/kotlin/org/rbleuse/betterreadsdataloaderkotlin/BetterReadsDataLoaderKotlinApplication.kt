@@ -1,6 +1,7 @@
 package org.rbleuse.betterreadsdataloaderkotlin
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import org.rbleuse.betterreadsdataloaderkotlin.connection.DatadumpLocationProperties
 import org.rbleuse.betterreadsdataloaderkotlin.domain.Author
 import org.rbleuse.betterreadsdataloaderkotlin.domain.Book
 import org.rbleuse.betterreadsdataloaderkotlin.dto.AuthorDumpDto
@@ -23,13 +24,12 @@ class BetterReadsDataLoaderKotlinApplication
 constructor(
     val authorRepository: AuthorRepository,
     val bookRepository: BookRepository,
-    @Value("\${datadump.location.authors}") val authorDumpLocation: String,
-    @Value("\${datadump.location.works}") val worksDumpLocation: String,
+    val datadumpLocation: DatadumpLocationProperties,
     val objectMapper: ObjectMapper
 ) {
 
     private fun initAuthors() {
-        val path = Paths.get(authorDumpLocation)
+        val path = Paths.get(datadumpLocation.authors)
 
         Files.lines(path).use {
             it.forEach { line ->
@@ -49,7 +49,7 @@ constructor(
     }
 
     private fun initWorks() {
-        val path = Paths.get(worksDumpLocation)
+        val path = Paths.get(datadumpLocation.works)
 
         Files.lines(path).use { lines ->
             lines.forEach { line ->

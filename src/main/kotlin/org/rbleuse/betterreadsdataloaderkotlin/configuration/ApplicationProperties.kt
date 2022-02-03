@@ -9,3 +9,10 @@ import java.io.File
 data class DataStaxAstraProperties(
     val secureConnectBundle: File
 )
+
+@ConstructorBinding
+@ConfigurationProperties("datadump.location")
+data class DatadumpLocationProperties(
+    val authors: String,
+    val works: String,
+)
